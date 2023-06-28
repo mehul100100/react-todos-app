@@ -29,19 +29,24 @@ function App() {
 
   return (
     <div className="App">
-      <header>Todo List</header>
-      <Form
-        setStatus={setStatus}
-        inputText={inputText}
-        setInputText={setInputText}
-        todos={todos}
-        setTodos={setTodos}
-      />
-      <TodoList
-        setTodos={setTodos}
-        todos={todos}
-        filteredTodos={filteredTodos}
-      />
+      <header className="title">Todo App</header>
+      <div className="card">
+        <div className="container">
+          <Form
+            setStatus={setStatus}
+            inputText={inputText}
+            setInputText={setInputText}
+            todos={todos}
+            setTodos={setTodos}
+          />
+
+          <TodoList
+            setTodos={setTodos}
+            todos={todos}
+            filteredTodos={filteredTodos}
+          />
+        </div>
+      </div>
     </div>
   );
 }
